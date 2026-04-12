@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Actividad en grupos — Porcentaje</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .actividad-content .table-wrap table {
+      font-size: inherit;
+      margin: 0.5rem 0;
+    }
+    .actividad-content .table-wrap th,
+    .actividad-content .table-wrap td {
+      padding: 0.25rem 0.5rem;
+    }
+    .actividad-content .table-wrap {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout site-main">
+    <header class="panel">
+      <h1>Actividad en grupos</h1>
+      <p class="subtitle">Analizando porcentajes de anotación en básquetbol</p>
+    </header>
+
+    <section class="panel">
+      <div class="actividad-content">
+        <div class="actividad-item">
+          <h2>1. Comparación de anotaciones</h2>
+          <p>
+            Emilio y Rafael entraron a jugar al mismo equipo. En su primer entrenamiento Emilio hizo 20 lanzamientos de los cuales anotó 17, mientras que Rafael hizo 25 lanzamientos y también anotó 17.
+          </p>
+          <p class="intro-question">¿Dirías que ambos son igual de buenos lanzando, ya que anotaron lo mismo?</p>
+          <button type="button" class="btn-continuar" id="btn-continuar">Continuar</button>
+        </div>
+
+        <div class="actividad-item" id="actividad-tabla" hidden>
+          <h2>2. Tabla de lanzamientos del equipo</h2>
+          <p>
+            La siguiente tabla muestra los lanzamientos del equipo durante este primer entrenamiento.<br>
+            <span class="intro-question">Basándose en los datos de la tabla de lanzamientos y anotaciones, ¿quién dirías que fue el mejor y quién el peor lanzador de este entrenamiento?</span>
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Jugador</th>
+                  <th class="num">Anotaciones</th>
+                  <th class="num">Fallos</th>
+                  <th class="num">Total de Lanzamientos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Javier</td>
+                  <td class="num">7</td>
+                  <td class="num">3</td>
+                  <td class="num">10</td>
+                </tr>
+                <tr>
+                  <td>Emilio</td>
+                  <td class="num">15</td>
+                  <td class="num">5</td>
+                  <td class="num">20</td>
+                </tr>
+                <tr>
+                  <td>Rafael</td>
+                  <td class="num">15</td>
+                  <td class="num">10</td>
+                  <td class="num">25</td>
+                </tr>
+                <tr>
+                  <td>Antonio</td>
+                  <td class="num">40</td>
+                  <td class="num">10</td>
+                  <td class="num">50</td>
+                </tr>
+                <tr>
+                  <td>Tomás</td>
+                  <td class="num">75</td>
+                  <td class="num">25</td>
+                  <td class="num">100</td>
+                </tr>
+                <tr>
+                  <td>Camilo</td>
+                  <td class="num">80</td>
+                  <td class="num">120</td>
+                  <td class="num">200</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="actividad-note">
+            (Es importante considerar el número de anotaciones según el número de lanzamientos)
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegación del sitio">
+    <div class="bottom-nav__group">
+      <a href="index.html" class="nav-btn">Introducción</a>
+      <a href="actividad.html" class="nav-btn nav-btn--primary" aria-current="page">Actividad en grupos</a>
+      <a href="graficar.html" class="nav-btn">Graficar</a>
+      <a href="practica.html" class="nav-btn">Práctica interactiva</a>
+    </div>
+    <span class="bottom-nav__sep" aria-hidden="true"></span>
+    <div class="bottom-nav__group">
+      <a href="index.html" class="nav-btn">← Anterior</a>
+      <a href="graficar.html" class="nav-btn">Siguiente →</a>
+    </div>
+  </nav>
+
+  <footer class="site-footer">Desarrollado por Astutosoft 2026</footer>
+
+  <script>
+    document.getElementById("btn-continuar").addEventListener("click", function () {
+      document.getElementById("actividad-tabla").hidden = false;
+      this.hidden = true;
+    });
+  </script>
+</body>
+</html>

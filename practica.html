@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Práctica interactiva — Anotaciones y fallos</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout site-main">
+    <header class="panel">
+      <h1>Estadísticas por jugador</h1>
+      <p class="subtitle">
+        Compara las anotaciones y fallos de cada jugador según el número de lanzamientos
+      </p>
+    </header>
+
+    <section class="panel">
+      <div class="table-panel-inner">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Jugador</th>
+                <th class="num">Anotaciones</th>
+                <th class="num">Fallos</th>
+                <th class="num">Total de Lanzamientos</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-body"></tbody>
+          </table>
+        </div>
+        <div class="table-panel-visual">
+          <img src="Basket.png" alt="Ilustración de baloncesto" />
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="chart-head">
+        <div class="chart-title" id="chart-title">Anotaciones y Fallos</div>
+        <div class="legend">
+          <span><i class="swatch anot"></i> Anotaciones</span>
+          <span><i class="swatch fall"></i> Fallos</span>
+        </div>
+      </div>
+      <div id="chart"></div>
+      <div class="hint-row">
+        <p class="hint">
+          Haz clic en una barra y usa las flechas ↑ ↓ del teclado para subir o bajar los lanzamientos
+          (también puedes arrastrar el borde superior). Esc quita la selección.
+        </p>
+        <button type="button" class="btn-restore" id="btn-restore">
+          Restaurar valores originales
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegación del sitio">
+    <div class="bottom-nav__group">
+      <a href="index.html" class="nav-btn">Introducción</a>
+      <a href="actividad.html" class="nav-btn">Actividad en grupos</a>
+      <a href="graficar.html" class="nav-btn">Graficar</a>
+      <a href="practica.html" class="nav-btn nav-btn--primary" aria-current="page">Práctica interactiva</a>
+    </div>
+    <span class="bottom-nav__sep" aria-hidden="true"></span>
+    <div class="bottom-nav__group">
+      <a href="graficar.html" class="nav-btn">← Anterior</a>
+      <button type="button" class="nav-btn" disabled aria-disabled="true">Siguiente →</button>
+    </div>
+  </nav>
+
+  <footer class="site-footer">Desarrollado por Astutosoft 2026</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
