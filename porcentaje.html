@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Porcentaje — Definición</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout site-main">
+    <header class="panel">
+      <h1>Porcentaje</h1>
+      <p class="subtitle">Definición y concepto</p>
+    </header>
+
+    <section class="panel">
+      <div class="actividad-content">
+
+        <div class="actividad-item">
+          <h2>¿Qué es un porcentaje?</h2>
+          <p>
+            Un <strong>porcentaje</strong> es una forma de expresar una cantidad como una fracción de
+            <strong>100</strong>. La palabra viene del latín <em>per centum</em>, que significa
+            <em>"por cada cien"</em>. El símbolo <strong>%</strong> representa esta idea de ¿cuántas partes de 100?
+          </p>
+          <button type="button" class="btn-continuar" id="btn-1">Continuar</button>
+        </div>
+
+        <div class="actividad-item" id="bloque-2" hidden>
+          <h2>¿Para qué sirve?</h2>
+          <p>
+            El porcentaje permite <strong>comparar cantidades que tienen totales distintos</strong>,
+            expresándolas sobre una base común de 100. Esto hace que la comparación sea justa y directa.
+          </p>
+          <button type="button" class="btn-continuar" id="btn-2">Continuar</button>
+        </div>
+
+        <div class="actividad-item" id="bloque-3" hidden>
+          <h2>¿Cómo se calcula?</h2>
+          <p>Para calcular el porcentaje de una parte respecto a un total:
+            <span class="formula">Porcentaje = (parte ÷ total) × 100</span>
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Jugador</th>
+                  <th class="num">Anotaciones</th>
+                  <th class="num">Total de Lanzamientos</th>
+                  <th class="num">Porcentaje de acierto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Javier</td>
+                  <td class="num">7</td>
+                  <td class="num">10</td>
+                  <td class="num">
+                    <button class="btn-calcular" data-calc="(7 ÷ 10) × 100 = " data-result="70%" data-state="0">Calcular</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Emilio</td>
+                  <td class="num">15</td>
+                  <td class="num">20</td>
+                  <td class="num">
+                    <button class="btn-calcular" data-calc="(15 ÷ 20) × 100 = " data-result="75%" data-state="0">Calcular</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Rafael</td>
+                  <td class="num">15</td>
+                  <td class="num">25</td>
+                  <td class="num">
+                    <button class="btn-calcular" data-calc="(15 ÷ 25) × 100 = " data-result="60%" data-state="0">Calcular</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Antonio</td>
+                  <td class="num">40</td>
+                  <td class="num">50</td>
+                  <td class="num">
+                    <button class="btn-calcular" data-calc="(40 ÷ 50) × 100 = " data-result="80%" data-state="0">Calcular</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tomás</td>
+                  <td class="num">75</td>
+                  <td class="num">100</td>
+                  <td class="num">
+                    <button class="btn-calcular" data-calc="(75 ÷ 100) × 100 = " data-result="75%" data-state="0">Calcular</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Camilo</td>
+                  <td class="num">80</td>
+                  <td class="num">200</td>
+                  <td class="num">
+                    <button class="btn-calcular" data-calc="(80 ÷ 200) × 100 = " data-result="40%" data-state="0">Calcular</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegación del sitio">
+    <div class="bottom-nav__group">
+      <a href="index.html" class="nav-btn">Introducción</a>
+      <a href="actividad.html" class="nav-btn">Actividad en grupos</a>
+      <a href="graficar.html" class="nav-btn">Graficar</a>
+      <a href="practica.html" class="nav-btn">Práctica interactiva</a>
+      <a href="porcentaje.html" class="nav-btn nav-btn--primary" aria-current="page">Porcentaje</a>
+      <a href="cierre.html" class="nav-btn">Cierre</a>
+    </div>
+    <span class="bottom-nav__sep" aria-hidden="true"></span>
+    <div class="bottom-nav__group">
+      <a href="practica.html" class="nav-btn">← Anterior</a>
+      <a href="cierre.html" class="nav-btn">Siguiente →</a>
+    </div>
+  </nav>
+
+  <footer class="site-footer">Desarrollado por Astutosoft 2026</footer>
+
+  <script>
+    document.getElementById("btn-1").addEventListener("click", function () {
+      document.getElementById("bloque-2").hidden = false;
+      this.hidden = true;
+    });
+
+    document.getElementById("btn-2").addEventListener("click", function () {
+      document.getElementById("bloque-3").hidden = false;
+      this.hidden = true;
+    });
+
+    document.querySelectorAll(".btn-calcular").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const state = this.dataset.state;
+        if (state === "0") {
+          this.textContent = this.dataset.calc;
+          this.dataset.state = "1";
+          this.classList.add("btn-calcular--calc");
+        } else if (state === "1") {
+          this.textContent = this.dataset.result;
+          this.dataset.state = "2";
+          this.classList.remove("btn-calcular--calc");
+          this.classList.add("btn-calcular--result");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -102,6 +102,64 @@ header.panel .subtitle {
   padding-left: 0.75rem;
 }
 
+/* Porcentaje */
+.formula-box {
+  background: linear-gradient(135deg, #dfeef3 0%, var(--cream-wash) 100%);
+  border: 1px solid rgba(42, 122, 161, 0.3);
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+  margin: 0.5rem 0 0.75rem;
+  text-align: center;
+}
+
+.formula {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+  letter-spacing: 0.02em;
+}
+
+.btn-calcular {
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--teal);
+  background: var(--card);
+  color: var(--teal-dark);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-calcular:hover {
+  background: rgba(42, 122, 161, 0.08);
+}
+
+.btn-calcular--calc {
+  border-color: var(--mustard);
+  color: var(--text);
+  font-weight: 400;
+  background: rgba(201, 160, 26, 0.07);
+  cursor: pointer;
+}
+
+.btn-calcular--result {
+  border: none;
+  background: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--teal-dark);
+  cursor: default;
+  padding: 0;
+  pointer-events: none;
+}
+
+.cierre-pregunta {
+  margin-top: 1rem !important;
+  font-size: 1rem;
+}
+
 /* Graficar */
 .ejemplo-row {
   display: flex;
